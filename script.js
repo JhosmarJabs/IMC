@@ -1,6 +1,6 @@
 document.getElementById('imcForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    
+
     let peso = parseFloat(document.getElementById('Peso').value);
     let estatura = parseFloat(document.getElementById('Estatura').value) / 100; 
 
@@ -17,5 +17,5 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
         tipoIMC = 'Obesidad';
     }
 
-    document.getElementById('Resultado').innerHTML = `IMC: ${imc.toFixed(2)}, Tipo IMC: ${tipoIMC}`;
+    document.getElementById('Resultado').value = `IMC: ${imc.toFixed(2)} \nTipo IMC: ${tipoIMC}`;
 });
